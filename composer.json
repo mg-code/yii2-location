@@ -1,0 +1,29 @@
+{
+    "name": "mg-code/yii2-location",
+    "description": "Location classes",
+    "keywords": [
+        "yii2",
+        "extension",
+        "location"
+    ],
+    "homepage": "https://github.com/mg-code/yii2-location",
+    "type": "yii2-extension",
+    "license": "BSD 3-Clause",
+    "authors": [
+        {
+            "name": "Maris Graudins",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "*",
+        "mg-code/yii2-helpers": "*",
+        "mg-code/yii2-assets": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mgcode\\location\\": ""
+        }
+    }
+}
