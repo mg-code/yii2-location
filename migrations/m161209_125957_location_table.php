@@ -30,7 +30,7 @@ class m161209_125957_location_table extends Migration
 
     public function down()
     {
-        $this->dropTable('{{%google_place}}');
+        $this->dropTable('{{%location}}');
     }
 
     /*
