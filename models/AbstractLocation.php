@@ -9,6 +9,7 @@ use Yii;
  *
  * @property string $id
  * @property string $google_id
+ * @property string $country
  * @property string $region
  * @property string $city
  * @property string $address
@@ -35,7 +36,7 @@ abstract class AbstractLocation extends \yii\db\ActiveRecord
             [['lat', 'lng'], 'number'],
             [['created_at', 'updated_at'], 'safe'],
             [['updated_at'], 'required'],
-            [['google_id', 'region', 'city', 'address', 'zip_code'], 'string', 'max' => 255],
+            [['google_id', 'country', 'region', 'city', 'address', 'zip_code'], 'string', 'max' => 255],
             [['google_id'], 'exist', 'skipOnError' => true, 'targetClass' => GooglePlace::className(), 'targetAttribute' => ['google_id' => 'id']],
         ];
     }
@@ -48,6 +49,7 @@ abstract class AbstractLocation extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('mgcode.location', 'ID'),
             'google_id' => Yii::t('mgcode.location', 'Google ID'),
+            'country' => Yii::t('mgcode.location', 'Country'),
             'region' => Yii::t('mgcode.location', 'Region'),
             'city' => Yii::t('mgcode.location', 'City'),
             'address' => Yii::t('mgcode.location', 'Address'),

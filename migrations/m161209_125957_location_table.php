@@ -14,6 +14,7 @@ class m161209_125957_location_table extends Migration
         $this->createTable('{{%location}}', [
             'id' => $this->bigPrimaryKey(22)->unsigned(),
             'google_id' => $this->char(255),
+            'country' => $this->string(255),
             'region' => $this->string(255),
             'city' => $this->string(255),
             'address' => $this->string(255),
