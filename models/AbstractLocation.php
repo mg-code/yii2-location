@@ -14,6 +14,7 @@ use Yii;
  * @property string $city
  * @property string $address
  * @property string $zip_code
+ * @property string $full
  * @property string $lat
  * @property string $lng
  * @property string $created_at
@@ -36,7 +37,7 @@ abstract class AbstractLocation extends \yii\db\ActiveRecord
             [['lat', 'lng'], 'number'],
             [['created_at', 'updated_at'], 'safe'],
             [['updated_at'], 'required'],
-            [['google_id', 'country', 'region', 'city', 'address', 'zip_code'], 'string', 'max' => 255],
+            [['google_id', 'country', 'region', 'city', 'address', 'zip_code', 'full'], 'string', 'max' => 255],
             [['google_id'], 'exist', 'skipOnError' => true, 'targetClass' => GooglePlace::className(), 'targetAttribute' => ['google_id' => 'id']],
         ];
     }
@@ -54,6 +55,7 @@ abstract class AbstractLocation extends \yii\db\ActiveRecord
             'city' => Yii::t('mgcode.location', 'City'),
             'address' => Yii::t('mgcode.location', 'Address'),
             'zip_code' => Yii::t('mgcode.location', 'Zip Code'),
+            'full' => Yii::t('mgcode.location', 'Full address'),
             'lat' => Yii::t('mgcode.location', 'Lat'),
             'lng' => Yii::t('mgcode.location', 'Lng'),
             'created_at' => Yii::t('mgcode.location', 'Created At'),

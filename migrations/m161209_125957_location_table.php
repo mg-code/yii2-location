@@ -19,6 +19,7 @@ class m161209_125957_location_table extends Migration
             'city' => $this->string(255),
             'address' => $this->string(255),
             'zip_code' => $this->string(255),
+            'full' => $this->string(255),
             'lat' => $this->decimal(10,7),
             'lng' => $this->decimal(10,7),
             'created_at' => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP'),

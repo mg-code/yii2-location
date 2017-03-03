@@ -18,7 +18,7 @@ class Location extends AbstractLocation
     public function scenarios()
     {
         return [
-            static::SCENARIO_DEFAULT => ['country', 'region', 'city', 'address', 'zip_code', 'lat', 'lng'],
+            static::SCENARIO_DEFAULT => ['country', 'region', 'city', 'address', 'zip_code', 'full', 'lat', 'lng'],
         ];
     }
 
